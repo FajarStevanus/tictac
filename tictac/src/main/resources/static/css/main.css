@@ -1,0 +1,14 @@
+.hello-title {
+	color: darkgreen;
+}
+
+table {
+	table-layout: fixed;
+	height: 150pt;
+	width: 150pt;
+}
+
+.tic {
+	height: 50pt;
+	width: 50pt;
+}

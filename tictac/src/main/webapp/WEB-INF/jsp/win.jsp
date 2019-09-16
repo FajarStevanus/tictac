@@ -8,10 +8,7 @@
 <body>
 	<h2 class="hello-title">${win}</h2>
 
-	<form action="/">
-		<input type="hidden" name="restart" value="1" /> <input class="tic"
-			type="submit" value="restart">
-	</form>
+	<a href="/" >Restart</a>
 	<script src="/js/main.js"></script>
 </body>
 </html>

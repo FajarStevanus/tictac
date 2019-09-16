@@ -23,7 +23,7 @@ public class TicTacController {
 	boolean gameOn;
 	String playerWin;
 
-	@RequestMapping({ "/", "/index" })
+//	@RequestMapping({ "/", "/index" })
 	public String home(Model model,
 			@RequestParam(value = "restart", required = false) String restart) {
 		if (restart != null) {
@@ -32,7 +32,7 @@ public class TicTacController {
 		return "index";
 	}
 
-	@RequestMapping("/tictactoe")
+	@RequestMapping({ "/", "/index", "/tictactoe"})
 	public String tictactoe(Model model,
 			@RequestParam(value = "num", required = false, defaultValue = "3") String num) {
 		init(num, true);
@@ -80,10 +80,10 @@ public class TicTacController {
 	
 	public boolean isGameOn() {
 		if (p1.isWin()) {
-			playerWin = "Player 1 (X) WON";
+			playerWin = "Player 1 (X) WON " + p1.getWinPos();
 			return false;
 		} else if (p2.isWin()) {
-			playerWin = "Player 2 (O) WON";
+			playerWin = "Player 2 (O) WON " + p2.getWinPos();
 			return false;
 		}
 		return true;
